@@ -7,7 +7,7 @@
 **What things you need to install the software and how to install them**
 # Application
 Tap to open
-# https://fierce-inlet-17636.herokuapp.com/
+# https://glacial-wave-46272.herokuapp.com/
 
 
 # Thank you & Regards
