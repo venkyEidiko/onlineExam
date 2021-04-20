@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/adminStudent.css">
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body bgcolor="skyblue">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwend.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="/">
+          <img src="https://st3.depositphotos.com/5532432/17928/v/450/depositphotos_179282970-stock-illustration-developer-flat-vector-icon.jpg" width="70px" height="70px">
+          <span class="ml-3 text-xl">Student Panel</span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center" style="text-decoration: solid;">
+          <a class="mr-5 hover:text-gray-900" style="box-shadow: rgb(111, 192, 35);" href="/student.html">Profile</a>
+          <a class="mr-5 hover:text-gray-900" href="studentExam.html">Exam</a>
+          <a class="mr-5 hover:text-gray-900" href="/result">Result</a>
+          
+        </nav>
+      </div>
+    </header>
+
+
+ <table>
+   
+     <tr>
+         <th>Name</th>
+         <th>Id</th>
+         <th>Course</th>
+         <th>Number</th>
+         <th>Address</th>
+         <th>Email Id</th>
+     </tr>
+     <%if(student.length > 0)
+{ 
+ student.forEach(function(info){%>
+     <tr>
+
+        <td><input name="uName" value="<%=info.stdName%>" readonly></td>
+        <td><input name="email" value="<%=info.stdId%>"  readonly></td>
+        <td><input name="contact" value="<%=info.stdCourse%>" readonly ></td>
+        <td><input name="city" value="<%=info.stdNumber%>" readonly ></td>
+        <td><input name="address" value="<%=info.stdAdd%>" readonly></td>
+        <td><input name="address" value="<%=info.stdMailId%>" readonly></td>
+        <td><input name="address" value="<%=info.stdPassword%>" readonly ></td>
+       
+    </tr>
+   
+ </table><br><br>
+ 
+<a class="button" href="/update?email=<%=info.stdMailId%>">Update</a>
+<%})}else { %>
+
+   
+       
+    
+        <style>
+            body, html {
+              height: 100%;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            * {
+              box-sizing: border-box;
+            }
+            
+            .bg-img {
+              /* The image used */
+              background-image: url("https://www.myidealcollege.org/wp-content/uploads/2018/11/Exam-Stress.jpg");
+            
+              min-height: 550px;
+            
+              /* Center and scale the image nicely */
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              position: relative;
+            }
+            
+            /* Add styles to the form container */
+            .container {
+              position: absolute;
+              right: 0;
+              margin: 20px;
+              max-width: 300px;
+              padding: 16px;
+              background-color: white;
+            }
+            
+            /* Full-width input fields */
+            input[type=text], input[type=password] {
+              width: 100%;
+              padding: 15px;
+              margin: 5px 0 22px 0;
+              border: none;
+              background: #f1f1f1;
+            }
+            
+            input[type=text]:focus, input[type=password]:focus {
+              background-color: #ddd;
+              outline: none;
+            }
+            
+            /* Set a style for the submit button */
+            .btn {
+              background-color: #4CAF50;
+              color: white;
+              padding: 16px 20px;
+              border: none;
+              cursor: pointer;
+              width: 100%;
+              opacity: 0.9;
+            }
+            
+            .btn:hover {
+              opacity: 1;
+            }
+            </style>
+    
+    </head>
+    <body>
+        <h1>Mail or password In-correct</h1>
+        <h2 style="text-align: left;color: lightcoral;">Admin Log-In </h2>
+        <div class="bg-img">
+          <form action="/login" class="container" method="GET">
+            <h1>Login</h1>
+        
+            <label for="email" id><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="mail" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+        
+            <button type="submit" class="btn">Login</button>
+          </form>
+        </div>
+    </body>
+    </html>
+
+
+
+
+<% } %>
+
+
+
+    
+</body>
+</html>

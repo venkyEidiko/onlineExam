@@ -1,0 +1,15 @@
+{
+    "app": {
+        "port": 1010
+    },
+    "db": {
+        "host": "localhost",
+        "port": 27017,
+        "name": "onlineEaxm"
+    },
+    "mail":{
+        
+        "from":"thewhitedevil404@gmail.com",
+        "password":"sarasu10"
+    }
+}
