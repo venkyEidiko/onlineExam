@@ -11,11 +11,7 @@ var db=config.get('db.name');
 
 // mongoose.connect(`mongodb://${host}:${port}/${db}`);
 
-mongoose.connect("mongodb+srv://venkatakrishna9397:sarasu10@cluster0.hjdib.mongodb.net/onlineExam?retryWrites=true&w=majority");
-// mongoose.connect("mongodb+srv://prashanth123:prashanth123@cluster0.kkcwp.mongodb.net/person?retryWrites=true&w=majority")
- 
-
-// const url = `mongodb+srv://login:sarasu10@cluster0.12vww.mongodb.net/person?retryWrites=true&w=majority`;
+mongoose.connect(`mongodb+srv://venky123:online123@cluster0.hjdib.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`);
 
 
 
